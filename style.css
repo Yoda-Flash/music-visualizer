@@ -1,0 +1,59 @@
+.piano {
+    display: flex;
+    width: 70vw;
+    border: 10px solid #000634;
+    border-radius: 1rem;
+    padding: 1rem;
+    padding-bottom: 3rem;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+
+.key {
+    height: calc(var(--width)*3);
+    width: var(--width);
+    border-radius: 0 0 4px 4px;
+    box-shadow: 2px 2px 10px 0px #ccc;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.white {
+    --width: 5vw;
+    height: calc(var(--width)*3);
+    border: 3px solid #010425;
+    background-color: #fff;
+    transition: 0.2s all;
+}
+
+.white:hover {
+    background-color: #f8f8f8;
+    border-bottom: none;
+    transform: rotate3d(1, 0, 0, 10deg);
+}
+
+.black {
+    z-index: 1;
+    background: linear-gradient(
+        180deg,
+        #24201EFF 26%,
+        #212803 86%
+    );
+    --width: 4vw;
+    height: calc(var(--width)*2.5);
+    top: 20px;
+    transition: 0.2s all;
+    margin-left: calc(var(--width)/-2);
+    margin-right: calc(var(--width)/-2);
+}
+
+.black:hover {
+    background: linear-gradient(
+        180deg,
+        #24201EFF 26%,
+        #818181 86%
+    );
+
+    transform: rotate3d(1, 0, 0, 10deg);
+}
